@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho | BYTE STORE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="py-3 bg-white border-bottom">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+            <a href="index.html" class="text-decoration-none">
+                <h2 class="fw-bold mb-0 text-dark">
+                    BYTE <span class="text-primary">STORE</span>
+                </h2>
+            </a>
+
+            <nav class="d-flex gap-4 flex-wrap">
+                <a href="index.html" class="text-dark text-decoration-none">Início</a>
+                <a href="produtos.html" class="text-dark text-decoration-none">Produtos</a>
+                <a href="carrinho.html" class="text-primary text-decoration-none fw-bold">Carrinho</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="container py-5">
+
+        <div class="mb-4">
+            <span class="text-primary fw-bold">SUA COMPRA</span>
+            <h1 class="fw-bold mt-2">Meu carrinho</h1>
+            <p class="text-secondary">Confira seus produtos antes de finalizar o pedido.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- PRODUTOS -->
+            <div class="col-lg-8">
+
+                <!-- PRODUTO 1 -->
+                <div class="card mb-3 shadow-sm produto-carrinho" data-price="3499.90">
+
+                    <div class="card-body">
+                        <div class="row align-items-center g-3">
+
+                            <div class="col-4 col-md-3">
+                                <img
+                                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400"
+                                    alt="Notebook Pro"
+                                    class="img-fluid rounded">
+                            </div>
+
+                            <div class="col-8 col-md-5">
+                                <small class="text-secondary">COMPUTADORES</small>
+                                <h5 class="fw-bold mt-1">Notebook Pro</h5>
+                                <strong class="text-primary">R$ 3.499,90</strong>
+                            </div>
+
+                            <div class="col-6 col-md-2">
+                                <label for="qtd1" class="form-label">Quantidade</label>
+                                <input type="number" id="qtd1"
+                                    class="form-control quantidade"
+                                    value="1" min="1">
+                            </div>
+
+                            <div class="col-6 col-md-2 text-md-end">
+                                <button class="btn btn-outline-danger btn-sm remover" type="button">
+                                    Remover
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUTO 2 -->
+                <div class="card mb-3 shadow-sm produto-carrinho" data-price="299.90">
+
+                    <div class="card-body">
+                        <div class="row align-items-center g-3">
+
+                            <div class="col-4 col-md-3">
+                                <img
+                                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+                                    alt="Headphone Wireless"
+                                    class="img-fluid rounded">
+                            </div>
+
+                            <div class="col-8 col-md-5">
+                                <small class="text-secondary">ÁUDIO</small>
+                                <h5 class="fw-bold mt-1">Headphone Wireless</h5>
+                                <strong class="text-primary">R$ 299,90</strong>
+                            </div>
+
+                            <div class="col-6 col-md-2">
+                                <label for="qtd2" class="form-label">Quantidade</label>
+                                <input type="number" id="qtd2"
+                                    class="form-control quantidade"
+                                    value="1" min="1">
+                            </div>
+
+                            <div class="col-6 col-md-2 text-md-end">
+                                <button class="btn btn-outline-danger btn-sm remover" type="button">
+                                    Remover
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARRINHO VAZIO -->
+                <div id="carrinhoVazio" class="text-center py-5 d-none">
+
+                    <h3 class="fw-bold">Seu carrinho está vazio.</h3>
+                    <p class="text-secondary">Explore nossos produtos e encontre o que procura.</p>
+
+                    <a href="produtos.html" class="btn btn-primary mt-2">
+                        Ver produtos
+                    </a>
+
+                </div>
+
+                <a href="produtos.html" class="btn btn-outline-primary mt-2">
+                    ← Continuar comprando
+                </a>
+
+            </div>
+
+            <!-- RESUMO -->
+            <div class="col-lg-4">
+
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <h4 class="fw-bold mb-4">Resumo do pedido</h4>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Subtotal</span>
+                            <strong id="subtotal">R$ 3.799,80</strong>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Frete</span>
+                            <strong class="text-success">Grátis</strong>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <h5 class="fw-bold">Total</h5>
+                            <h5 class="text-primary fw-bold" id="total">R$ 3.799,80</h5>
+                        </div>
+
+                        <a href="checkout.html" id="finalizarCompra"
+                            class="btn btn-primary btn-lg w-100">
+                            Finalizar compra
+                        </a>
+
+                        <p class="text-secondary text-center small mt-3 mb-0">
+                            Compra demonstrativa para projeto acadêmico.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="text-center py-4 bg-dark text-white mt-5">
+        <p class="mb-0">&copy; 2026 BYTE STORE. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const produtos = document.querySelectorAll(".produto-carrinho");
+        const subtotalElemento = document.getElementById("subtotal");
+        const totalElemento = document.getElementById("total");
+        const carrinhoVazio = document.getElementById("carrinhoVazio");
+        const finalizarCompra = document.getElementById("finalizarCompra");
+
+        function atualizarCarrinho() {
+
+            let subtotal = 0;
+            let quantidadeProdutos = 0;
+
+            produtos.forEach(produto => {
+
+                if (produto.classList.contains("d-none")) {
+                    return;
+                }
+
+                const preco = Number(produto.dataset.price);
+                const quantidade = Number(produto.querySelector(".quantidade").value);
+
+                subtotal += preco * quantidade;
+                quantidadeProdutos++;
+
+            });
+
+            const formatarPreco = valor => valor.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            });
+
+            subtotalElemento.textContent = formatarPreco(subtotal);
+            totalElemento.textContent = formatarPreco(subtotal);
+
+            if (quantidadeProdutos === 0) {
+                carrinhoVazio.classList.remove("d-none");
+                finalizarCompra.classList.add("disabled");
+                finalizarCompra.setAttribute("aria-disabled", "true");
+            } else {
+                carrinhoVazio.classList.add("d-none");
+                finalizarCompra.classList.remove("disabled");
+                finalizarCompra.removeAttribute("aria-disabled");
+            }
+
+        }
+
+        document.querySelectorAll(".quantidade").forEach(input => {
+
+            input.addEventListener("change", () => {
+
+                if (Number(input.value) < 1 || input.value === "") {
+                    input.value = 1;
+                }
+
+                atualizarCarrinho();
+
+            });
+
+        });
+
+        document.querySelectorAll(".remover").forEach(botao => {
+
+            botao.addEventListener("click", () => {
+
+                const produto = botao.closest(".produto-carrinho");
+
+                produto.classList.add("d-none");
+
+                atualizarCarrinho();
+
+            });
+
+        });
+
+        atualizarCarrinho();
+
+    </script>
+
+</body>
+</html>

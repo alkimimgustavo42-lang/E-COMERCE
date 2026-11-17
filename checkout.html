@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finalizar compra | BYTE STORE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="py-3 bg-white border-bottom">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+            <a href="index.html" class="text-decoration-none">
+                <h2 class="fw-bold mb-0 text-dark">
+                    BYTE <span class="text-primary">STORE</span>
+                </h2>
+            </a>
+
+            <nav class="d-flex gap-4 flex-wrap">
+                <a href="index.html" class="text-dark text-decoration-none">Início</a>
+                <a href="produtos.html" class="text-dark text-decoration-none">Produtos</a>
+                <a href="carrinho.html" class="text-dark text-decoration-none">Carrinho</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container py-5">
+
+        <div class="mb-5">
+            <span class="text-primary fw-bold">ÚLTIMA ETAPA</span>
+            <h1 class="fw-bold mt-2">Finalizar compra</h1>
+            <p class="text-secondary">
+                Preencha seus dados para concluir seu pedido.
+            </p>
+        </div>
+
+        <form id="formCheckout">
+
+            <div class="row g-4">
+
+                <!-- COLUNA DE DADOS -->
+                <div class="col-lg-8">
+
+                    <!-- DADOS PESSOAIS -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body p-4">
+
+                            <h4 class="fw-bold mb-4">1. Dados pessoais</h4>
+
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome completo</label>
+                                <input type="text" id="nome" class="form-control"
+                                    placeholder="Digite seu nome completo" required>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" id="email" class="form-control"
+                                        placeholder="seuemail@email.com" required>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefone" class="form-label">Telefone</label>
+                                    <input type="tel" id="telefone" class="form-control"
+                                        placeholder="(00) 00000-0000" required>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ENDEREÇO -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body p-4">
+
+                            <h4 class="fw-bold mb-4">2. Endereço de entrega</h4>
+
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <label for="cep" class="form-label">CEP</label>
+                                    <input type="text" id="cep" class="form-control"
+                                        placeholder="00000-000" required>
+                                </div>
+
+                                <div class="col-md-8 mb-3">
+                                    <label for="endereco" class="form-label">Endereço</label>
+                                    <input type="text" id="endereco" class="form-control"
+                                        placeholder="Rua ou avenida" required>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <label for="numero" class="form-label">Número</label>
+                                    <input type="text" id="numero" class="form-control"
+                                        placeholder="Número" required>
+                                </div>
+
+                                <div class="col-md-8 mb-3">
+                                    <label for="complemento" class="form-label">Complemento</label>
+                                    <input type="text" id="complemento" class="form-control"
+                                        placeholder="Apartamento, bloco etc.">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="cidade" class="form-label">Cidade</label>
+                                    <input type="text" id="cidade" class="form-control"
+                                        placeholder="Sua cidade" required>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="estado" class="form-label">Estado</label>
+
+                                    <select id="estado" class="form-select" required>
+                                        <option value="" selected disabled>Selecione seu estado</option>
+                                        <option>Acre</option>
+                                        <option>Alagoas</option>
+                                        <option>Amapá</option>
+                                        <option>Amazonas</option>
+                                        <option>Bahia</option>
+                                        <option>Ceará</option>
+                                        <option>Distrito Federal</option>
+                                        <option>Espírito Santo</option>
+                                        <option>Goiás</option>
+                                        <option>Maranhão</option>
+                                        <option>Mato Grosso</option>
+                                        <option>Mato Grosso do Sul</option>
+                                        <option>Minas Gerais</option>
+                                        <option>Pará</option>
+                                        <option>Paraíba</option>
+                                        <option>Paraná</option>
+                                        <option>Pernambuco</option>
+                                        <option>Piauí</option>
+                                        <option>Rio de Janeiro</option>
+                                        <option>Rio Grande do Norte</option>
+                                        <option>Rio Grande do Sul</option>
+                                        <option>Rondônia</option>
+                                        <option>Roraima</option>
+                                        <option>Santa Catarina</option>
+                                        <option>São Paulo</option>
+                                        <option>Sergipe</option>
+                                        <option>Tocantins</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- PAGAMENTO -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body p-4">
+
+                            <h4 class="fw-bold mb-4">3. Forma de pagamento</h4>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio"
+                                    name="pagamento" id="pix" value="PIX" required checked>
+
+                                <label class="form-check-label" for="pix">
+                                    <strong>PIX</strong>
+                                    <p class="text-secondary mb-0">
+                                        Pagamento demonstrativo via PIX.
+                                    </p>
+                                </label>
+                            </div>
+
+                            <hr>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio"
+                                    name="pagamento" id="cartao" value="Cartão de crédito">
+
+                                <label class="form-check-label" for="cartao">
+                                    <strong>Cartão de crédito</strong>
+                                    <p class="text-secondary mb-0">
+                                        Opção de pagamento com cartão.
+                                    </p>
+                                </label>
+                            </div>
+
+                            <hr>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio"
+                                    name="pagamento" id="boleto" value="Boleto bancário">
+
+                                <label class="form-check-label" for="boleto">
+                                    <strong>Boleto bancário</strong>
+                                    <p class="text-secondary mb-0">
+                                        Opção de pagamento por boleto.
+                                    </p>
+                                </label>
+                            </div>
+
+                            <div id="informacaoPagamento"
+                                class="alert alert-info mt-4 mb-0">
+                                Você selecionou PIX. A geração do pagamento será implementada futuramente.
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RESUMO DO PEDIDO -->
+                <div class="col-lg-4">
+
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+
+                            <h4 class="fw-bold mb-4">Resumo do pedido</h4>
+
+                            <div class="d-flex align-items-center gap-3 mb-3">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200"
+                                    alt="Notebook Pro"
+                                    class="rounded"
+                                    style="width: 65px; height: 65px; object-fit: cover;">
+
+                                <div class="flex-grow-1">
+                                    <strong>Notebook Pro</strong>
+                                    <p class="text-secondary small mb-0">1 unidade</p>
+                                </div>
+
+                                <strong>R$ 3.499,90</strong>
+
+                            </div>
+
+                            <div class="d-flex align-items-center gap-3 mb-3">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200"
+                                    alt="Headphone Wireless"
+                                    class="rounded"
+                                    style="width: 65px; height: 65px; object-fit: cover;">
+
+                                <div class="flex-grow-1">
+                                    <strong>Headphone Wireless</strong>
+                                    <p class="text-secondary small mb-0">1 unidade</p>
+                                </div>
+
+                                <strong>R$ 299,90</strong>
+
+                            </div>
+
+                            <hr>
+
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Subtotal</span>
+                                <strong>R$ 3.799,80</strong>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Frete</span>
+                                <strong class="text-success">Grátis</strong>
+                            </div>
+
+                            <hr>
+
+                            <div class="d-flex justify-content-between mb-4">
+                                <h5 class="fw-bold">Total</h5>
+                                <h5 class="text-primary fw-bold">R$ 3.799,80</h5>
+                            </div>
+
+                            <button class="btn btn-primary btn-lg w-100" type="submit">
+                                Confirmar pedido
+                            </button>
+
+                            <a href="carrinho.html"
+                                class="btn btn-outline-dark w-100 mt-3">
+                                Voltar ao carrinho
+                            </a>
+
+                            <p class="text-secondary text-center mt-3 mb-0 small">
+                                Ambiente demonstrativo. Nenhuma cobrança será realizada.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="text-center py-4 bg-dark text-white">
+        <p class="mb-0">&copy; 2026 BYTE STORE. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Atualiza a informação conforme o pagamento selecionado
+        const opcoesPagamento = document.querySelectorAll('input[name="pagamento"]');
+        const informacaoPagamento = document.getElementById("informacaoPagamento");
+
+        opcoesPagamento.forEach(opcao => {
+
+            opcao.addEventListener("change", () => {
+
+                if (opcao.value === "PIX") {
+                    informacaoPagamento.textContent =
+                        "Você selecionou PIX. A geração do pagamento será implementada futuramente.";
+                }
+
+                if (opcao.value === "Cartão de crédito") {
+                    informacaoPagamento.textContent =
+                        "Você selecionou cartão de crédito. O processamento será implementado futuramente.";
+                }
+
+                if (opcao.value === "Boleto bancário") {
+                    informacaoPagamento.textContent =
+                        "Você selecionou boleto bancário. A geração do boleto será implementada futuramente.";
+                }
+
+            });
+
+        });
+
+        // Confirmação demonstrativa do pedido
+        const formCheckout = document.getElementById("formCheckout");
+
+        formCheckout.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value.trim();
+            const pagamento = document.querySelector('input[name="pagamento"]:checked').value;
+
+            alert(
+                "Pedido demonstrativo confirmado!\n\n" +
+                "Cliente: " + nome + "\n" +
+                "Pagamento escolhido: " + pagamento + "\n\n" +
+                "A integração real do pedido será implementada futuramente."
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>
